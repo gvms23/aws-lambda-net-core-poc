@@ -9,6 +9,12 @@ namespace FunctionCalculadora
     public class Function
     {
         
+        /// <summary>
+        /// Function called by AWS.
+        /// </summary>
+        /// <param name="request">Números separados por vírgula (em string)</param>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public object FunctionHandler(string request, ILambdaContext context)
         {
             string result = request.Split(',').Sum(int.Parse).ToString();
